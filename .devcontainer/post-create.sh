@@ -167,8 +167,11 @@ printf "        %-15s %s\n" "Python:" "$(python3 --version 2>/dev/null || echo '
 printf "        %-15s %s\n" "Node.js:" "$(node --version 2>/dev/null || echo '❌ not installed')"
 printf "        %-15s %s\n" "GitHub CLI:" "$(gh --version 2>/dev/null | head -n1 || echo '❌ not installed')"
 printf "        %-15s %s\n" "uv:" "$(uv --version 2>/dev/null || echo '❌ not installed')"
+printf "        %-15s %s\n" "Pandoc:" "$(pandoc --version 2>/dev/null | head -n1 || echo '❌ not installed')"
+printf "        %-15s %s\n" "Mermaid CLI:" "$(mmdc --version 2>/dev/null | head -n1 || echo '❌ not installed')"
 printf "        %-15s %s\n" "Checkov:" "$(checkov --version 2>/dev/null || echo '❌ not installed')"
 printf "        %-15s %s\n" "graphviz:" "$(dot -V 2>&1 | head -n1 || echo '❌ not installed')"
+printf "        %-15s %s\n" "Playwright:" "$(npx playwright --version 2>/dev/null || echo '❌ not installed')"
 
 step_done "All verifications complete"
 

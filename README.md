@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Tr0j4n0/Tr0j4n0/master/assets/main.gif" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:121212,50:0078D4,100:00B7C3&text=Azure%20Architect%20Toolbox&fontSize=48&fontColor=FFFFFF&fontAlignY=38&desc=Architectural%20Engineering%20at%20Scale&descAlignY=58" width="100%" />
 </p>
-
-<h1 align="center">Azure Architect Toolbox</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Microsoft-Employee-0078D4?style=flat-square&logo=microsoft&logoColor=white" />
@@ -26,10 +24,6 @@
   <a href="https://github.com/jonathan-vella/azure-architect-toolbox/fork">
     <img src="https://img.shields.io/badge/Fork-Now-orange?style=flat-square&logo=github" />
   </a>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=jonathan-vella&repo=azure-architect-toolbox&show_owner=true&theme=omni" />
 </p>
 
 <p align="center">
