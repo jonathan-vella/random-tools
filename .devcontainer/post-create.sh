@@ -65,9 +65,9 @@ fi
 
 # ─── Step 2: npm global tools ────────────────────────────────────────────────
 
-step_start "📦" "Installing global tools (markdownlint-cli2)..."
-if sudo npm install -g markdownlint-cli2 --loglevel=warn 2>&1 | tail -2; then
-    step_done "markdownlint-cli2 installed globally"
+step_start "📦" "Installing global tools (markdownlint-cli2, @mermaid-js/mermaid-cli)..."
+if sudo npm install -g markdownlint-cli2 @mermaid-js/mermaid-cli --loglevel=warn 2>&1 | tail -2; then
+    step_done "Global tools installed"
 else
     step_warn "Global install had issues"
 fi
