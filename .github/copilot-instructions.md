@@ -1,4 +1,4 @@
-# jonnies-swiss-knife - AI Agent Instructions
+# Azure Architect Toolbox - AI Agent Instructions
 
 ## Project Guidelines
 
