@@ -1,0 +1,84 @@
+{
+  "name": "jonnies-swiss-knife",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "installBicep": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/powershell:2": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.13",
+      "installTools": false
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-extra/features/pandoc:1": {
+      "version": "latest"
+    }
+  },
+  "onCreateCommand": "set -e; sudo apt-get update; sudo apt-get install -y graphviz dos2unix; curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "containerEnv": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUNBUFFERED": "1",
+    "UV_CACHE_DIR": "/home/vscode/.cache/uv"
+  },
+  "remoteEnv": {
+    "AZURE_DEFAULTS_LOCATION": "swedencentral"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-azuretools.vscode-bicep",
+        "ms-vscode.powershell",
+        "ms-python.python",
+        "ms-vscode.azurecli",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "bierner.markdown-preview-github-styles",
+        "davidanson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "mechatroner.rainbow-csv",
+        "redhat.vscode-yaml",
+        "mutantdino.resourcemonitor",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.eol": "\n",
+        "python.analysis.typeCheckingMode": "basic"
+      }
+    }
+  },
+  "mounts": [
+    {
+      "source": "${localEnv:USERPROFILE}${localEnv:HOME}/.azure",
+      "target": "/home/vscode/.azure",
+      "type": "bind"
+    },
+    {
+      "source": "devcontainer-gh-config-${devcontainerId}",
+      "target": "/home/vscode/.config/gh",
+      "type": "volume"
+    },
+    {
+      "source": "devcontainer-uv-cache-${devcontainerId}",
+      "target": "/home/vscode/.cache/uv",
+      "type": "volume"
+    }
+  ],
+  "remoteUser": "vscode"
+}
+

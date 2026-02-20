@@ -1,0 +1,11 @@
+# Deny all files and folders
+*
+
+# Explicitly allow necessary project files
+!README.md
+!.gitignore
+!.devcontainer/
+!.devcontainer/**
+!.github/
+!.github/**
+!LICENSE
